@@ -1,0 +1,16 @@
+Activity,Executive Sponsor,Customer Owner,Implementation Lead,Product Owner,Data Owner,Engineering Owner,Security Reviewer,Privacy Reviewer,Launch Authority
+Approve business objective,I,A,R,C,C,C,I,I,I
+Approve scope and success measures,I,A,R,R,C,C,I,I,I
+Confirm data dictionary,I,C,R,A,R,C,I,C,I
+Approve recipient and destination,I,A,R,I,C,R,C,C,I
+Select API authentication,I,I,C,C,C,R,A,C,I
+Complete security review,I,I,C,I,C,R,A,C,I
+Complete privacy review,I,I,C,I,C,C,C,A,I
+Build transformation and export,I,I,C,C,A,R,I,I,I
+Execute UAT,I,C,A,C,R,R,C,C,I
+Approve UAT exit,I,C,R,A,R,R,C,C,I
+Approve rollback plan,I,I,R,C,C,R,C,C,A
+Accept residual risk,I,C,R,C,C,C,C,C,A
+Make Go or No-Go decision,I,C,R,C,C,C,C,C,A
+Send launch communication,I,C,A,C,I,I,I,I,I
+Own post-launch stabilization,I,C,A,C,R,R,C,C,I
