@@ -3,25 +3,275 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Case study: Governed Delivery, an implementation governance engine created by Josiah Parve.">
+  <meta name="description" content="Flagship case study for Governed Delivery, a working implementation governance prototype designed by Josiah Parve.">
+  <meta name="theme-color" content="#091725">
+  <meta property="og:title" content="Governed Delivery Flagship Case Study | Josiah Parve">
+  <meta property="og:description" content="How Josiah Parve translated recurring implementation failure patterns into a governed delivery product system.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://josiahparve.work/case-studies/governed-delivery.html">
+  <link rel="canonical" href="https://josiahparve.work/case-studies/governed-delivery.html">
   <link rel="stylesheet" href="../styles.css">
-  <title>Governed Delivery Case Study | Josiah Parve</title>
-  <style>
-    .case-hero{padding:150px 0 76px;background:#091725;color:#fff}.case-hero h1{max-width:1000px;font-size:clamp(3rem,7vw,6rem)}.case-hero p{max-width:760px;color:#bdcbd4;font-size:1.15rem}.case-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.case-meta span{padding:8px 12px;border:1px solid rgba(255,255,255,.17);border-radius:999px;color:#c7f36b;font-size:.78rem;font-weight:800}.story{max-width:900px;margin:auto}.story section{padding:55px 0;border-bottom:1px solid #dce2e6}.story h2{font-size:clamp(2rem,4vw,3.6rem)}.story h3{margin-top:2rem}.story p,.story li{color:#596979}.story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px 0}.story-card{padding:22px;border:1px solid #dce2e6;background:#fff;border-radius:16px}.story-card strong{display:block;color:#0f746d;margin-bottom:8px}.artifact-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:0;list-style:none}.artifact-list li{padding:14px 16px;background:#fff;border:1px solid #dce2e6;border-radius:10px}.back{display:inline-block;margin-top:34px;color:#c7f36b;font-weight:800;text-decoration:none}@media(max-width:720px){.story-grid,.artifact-list{grid-template-columns:1fr}}
-  </style>
+  <link rel="stylesheet" href="governed-delivery.css">
+  <title>Governed Delivery Flagship Case Study | Josiah Parve</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Governed Delivery for Work That Cannot Afford to Guess",
+    "description": "A working implementation governance prototype that converts incomplete intake into risks, controls, evidence, and delivery work.",
+    "author": {"@type": "Person", "name": "Josiah Parve", "url": "https://josiahparve.work/"},
+    "mainEntity": {
+      "@type": "SoftwareApplication",
+      "name": "Intelligent Services: Governed Delivery",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web and command line prototype",
+      "codeRepository": "https://github.com/Rando2020/Intelligent_Services"
+    },
+    "url": "https://josiahparve.work/case-studies/governed-delivery.html"
+  }
+  </script>
 </head>
 <body>
-  <header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html"><span class="brand-mark">JP</span><span>Josiah Parve</span></a><nav class="site-nav" style="display:flex"><a href="../index.html#work">All work</a><a href="mailto:JosiahParve@gmail.com">Contact</a></nav></div></header>
-  <main>
-    <section class="case-hero"><div class="container"><p class="eyebrow">Case study 01</p><h1>Governed Delivery for work that cannot afford to guess.</h1><p>A working prototype that turns messy operational intake into governed, audit-ready delivery work. It focuses on the point where implementation, data, compliance, and last-mile operations collide.</p><div class="case-meta"><span>Product strategy</span><span>Python</span><span>Rule engine</span><span>Jira and ADO</span><span>Healthcare governance</span></div><a class="back" href="../index.html">← Back to portfolio</a></div></section>
-    <div class="container story">
-      <section><p class="eyebrow">The problem</p><h2>Technically correct work can still create an operational or compliance incident.</h2><p>Implementation risk often hides in incomplete intake, unclear ownership, missing evidence, incorrect file routing, undefined approval criteria, and tools that generate work without understanding the surrounding controls.</p><div class="story-grid"><div class="story-card"><strong>Business failure</strong><span>Important requirements remain implicit until late in delivery.</span></div><div class="story-card"><strong>Operational failure</strong><span>Teams launch without proof that the right controls and owners are in place.</span></div><div class="story-card"><strong>Product failure</strong><span>Recurring delivery gaps are handled manually instead of becoming reusable system logic.</span></div></div></section>
-      <section><p class="eyebrow">My hypothesis</p><h2>Implementation intake should behave like executable governance.</h2><p>Rather than asking an AI tool to produce generic tickets, the system should normalize the intake, identify relevant platforms and regulatory context, detect missing decisions, apply configurable rules, score readiness, generate evidence requirements, and route high-risk findings to humans.</p></section>
-      <section><p class="eyebrow">The product system</p><h2>One input, multiple governed outputs.</h2><ul class="artifact-list"><li>Normalized intake JSON</li><li>Readiness scorecard</li><li>Rule match report</li><li>Platform control profile</li><li>Launch blocker summary</li><li>Ticket hierarchy</li><li>Evidence packet</li><li>Jira, ADO, Rally and Asana exports</li></ul></section>
-      <section><p class="eyebrow">Technical decisions</p><h2>Deliberate constraints increased trust.</h2><h3>Configurable rules instead of hidden prompt logic</h3><p>Controls are represented as readable rule packs so product, operations, security, data, and compliance stakeholders can review what the engine is evaluating.</p><h3>Human review remains explicit</h3><p>The system identifies evidence and escalation needs but does not present operational reasoning as legal advice or replace accountable owners.</p><h3>Write actions begin as dry runs</h3><p>The Jira scaffold prepares payloads before creating work items. This forces field mapping, permissions, issue-type behavior, and failure handling to be reviewed before automation can write into a production system.</p></section>
-      <section><p class="eyebrow">What this demonstrates</p><h2>Product leadership beyond a clickable prototype.</h2><p>The project shows how I translate years of implementation failure patterns into an executable product: define the problem, choose the control model, structure the data, build the delivery logic, create testable outputs, document limitations, and design the route from demo to enterprise integration.</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/Rando2020/Intelligent_Services">Explore the repository</a><a class="button dark-text" href="mailto:JosiahParve@gmail.com?subject=Governed%20Delivery">Discuss the project</a></div></section>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../index.html" aria-label="Josiah Parve portfolio home"><span class="brand-mark" aria-hidden="true">JP</span><span>Josiah Parve</span></a>
+      <nav class="site-nav case-nav" aria-label="Case study navigation" style="display:flex;flex-wrap:wrap">
+        <a href="../index.html#work">All work</a>
+        <a href="#artifacts">Proof package</a>
+        <a href="#contribution">My role</a>
+        <a href="mailto:JosiahParve@gmail.com?subject=Governed%20Delivery%20case%20study">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="case-hero">
+      <div class="container case-hero-grid">
+        <div>
+          <p class="eyebrow">Flagship case study</p>
+          <h1>Governed Delivery for work that cannot afford to guess.</h1>
+          <p class="lede">A working product prototype that turns incomplete implementation intake into explicit requirements, operational risks, readiness controls, evidence, and execution-ready work. It is designed for the point where customers, product, engineering, data, compliance, and operations all depend on the same decision being right.</p>
+          <div class="case-meta" aria-label="Case study focus areas"><span>Product strategy</span><span>Python and schemas</span><span>Rules and scoring</span><span>Jira and ADO</span><span>Healthcare operations</span><span>Human oversight</span></div>
+          <div class="hero-actions"><a class="button button-primary" href="#walkthrough">See the walkthrough</a><a class="button button-secondary" href="#artifacts">Download proof artifacts</a></div>
+        </div>
+        <aside class="maturity-card" aria-label="Current product maturity">
+          <strong>Current product maturity</strong>
+          <h2>Working proof of concept</h2>
+          <p>The generation pipeline, rule packs, scorecards, exporters, backend API, tests, static demo, and Jira Forge scaffold exist. The product is not represented as production-ready enterprise software.</p>
+          <ul class="maturity-list"><li>Executable governed delivery package generation</li><li>Configurable governance and launch-blocker rules</li><li>Jira, ADO, Rally, and Asana export outputs</li><li>Human review and dry-run integration boundaries</li></ul>
+        </aside>
+      </div>
+    </section>
+
+    <nav class="case-toc" aria-label="On this page"><div class="container case-toc-inner"><a href="#summary">Summary</a><a href="#problem">Problem</a><a href="#users">Users</a><a href="#workflow">Workflow</a><a href="#walkthrough">Walkthrough</a><a href="#architecture">Architecture</a><a href="#governance">Governance</a><a href="#decisions">Tradeoffs</a><a href="#artifacts">Artifacts</a><a href="#validation">Validation</a><a href="#roadmap">Roadmap</a><a href="#contribution">My role</a></div></nav>
+
+    <div class="container case-shell">
+      <section class="case-section" id="summary">
+        <p class="eyebrow">Executive summary</p>
+        <h2>A product system for converting operational ambiguity into accountable execution.</h2>
+        <dl class="summary-grid">
+          <div class="summary-card"><dt>Problem</dt><dd>Implementation work often begins with incomplete intake, implicit approvals, disconnected documentation, and risks that surface too late.</dd></div>
+          <div class="summary-card"><dt>Target users</dt><dd>Implementation leaders, product operations, customer success, data teams, engineering, program managers, security, privacy, and compliance reviewers.</dd></div>
+          <div class="summary-card"><dt>Josiah's role</dt><dd>Problem identification, product strategy, operating-model design, requirements, governance architecture, prototype direction, validation, and roadmap definition.</dd></div>
+          <div class="summary-card"><dt>Product solution</dt><dd>A governed pipeline that normalizes intake, applies reviewable rules, scores readiness, identifies blockers, and generates work plus evidence.</dd></div>
+          <div class="summary-card"><dt>Technical approach</dt><dd>Python tools, structured schemas, JSON-compatible YAML rule packs, deterministic scoring, a backend API, CSV exporters, tests, and a Jira Forge scaffold.</dd></div>
+          <div class="summary-card"><dt>Governance approach</dt><dd>Controls remain inspectable. High-risk findings route to accountable humans. Operational guidance is not presented as legal or compliance approval.</dd></div>
+          <div class="summary-card"><dt>Business value</dt><dd>Earlier discovery of missing decisions, fewer late surprises, more consistent artifacts, clearer ownership, and stronger launch evidence.</dd></div>
+          <div class="summary-card"><dt>Current maturity</dt><dd>Working proof of concept. Enterprise authentication, production write actions, tenant controls, and certification remain future work.</dd></div>
+        </dl>
+      </section>
+
+      <section class="case-section" id="problem">
+        <p class="eyebrow">The operational problem</p>
+        <h2>Technically correct work can still create an operational, customer, or compliance incident.</h2>
+        <p>Delivery failures emerge when customer intent, technical requirements, data movement, approvals, evidence, and last-mile operations do not agree. Generic AI ticket generation can make a backlog look complete while preserving the gaps that matter most.</p>
+        <div class="three-grid">
+          <article class="card"><strong>Incomplete intake</strong><p>Critical decisions remain implicit, contradictory, or owned by nobody until build or launch.</p></article>
+          <article class="card"><strong>Disconnected controls</strong><p>Security, privacy, data, product, and operational checks live in separate documents and meetings.</p></article>
+          <article class="card"><strong>False readiness</strong><p>A numerical score or completed checklist can hide unresolved mandatory blockers.</p></article>
+          <article class="card"><strong>Last-mile risk</strong><p>A correct pipeline can still fail through wrong recipients, folders, filenames, schedules, or manifests.</p></article>
+          <article class="card"><strong>Manual recurrence</strong><p>Teams solve the same gaps repeatedly without turning the pattern into reusable system logic.</p></article>
+          <article class="card"><strong>Unclear accountability</strong><p>Automation creates work, but the system does not identify who must interpret, approve, or accept risk.</p></article>
+        </div>
+      </section>
+
+      <section class="case-section" id="users">
+        <p class="eyebrow">Users and stakeholders</p>
+        <h2>The product is designed around the full delivery system, not one persona.</h2>
+        <div class="three-grid">
+          <article class="card"><strong>Implementation and program leaders</strong><p>Need complete intake, dependencies, milestones, ownership, risks, and customer-ready status.</p></article>
+          <article class="card"><strong>Product and engineering</strong><p>Need normalized requirements, acceptance criteria, architecture context, and backlog structure.</p></article>
+          <article class="card"><strong>Data and platform teams</strong><p>Need source-to-target details, quality rules, schedules, delivery controls, and evidence.</p></article>
+          <article class="card"><strong>Customer success and customers</strong><p>Need transparent blockers, responsibilities, decisions, and a realistic path to launch.</p></article>
+          <article class="card"><strong>Security, privacy, and compliance</strong><p>Need early routing, traceable evidence, documented exceptions, and approval boundaries.</p></article>
+          <article class="card"><strong>Executives and operations</strong><p>Need a concise view of readiness, impact, residual risk, and Go or No-Go authority.</p></article>
+        </div>
+      </section>
+
+      <section class="case-section" id="workflow">
+        <p class="eyebrow">Product workflow</p>
+        <h2>Each stage has a different trust model.</h2>
+        <p>The workflow separates repeatable control logic, AI-assisted interpretation, accountable human decisions, and external output boundaries.</p>
+        <div class="workflow-legend" aria-label="Workflow legend"><span class="legend det">Deterministic control</span><span class="legend ai">AI-assisted interpretation</span><span class="legend human">Human decision</span><span class="legend output">Output boundary</span></div>
+        <ol class="workflow">
+          <li><small>01</small><h3>Messy intake</h3><p>Business context, documents, tools, dates, and unresolved assumptions.</p><span class="step-type human">Human input</span></li>
+          <li><small>02</small><h3>Normalized requirements</h3><p>Content is organized into a consistent schema and missing fields are surfaced.</p><span class="step-type ai">AI assisted plus validation</span></li>
+          <li><small>03</small><h3>Rule and platform detection</h3><p>Named tools and triggers map to reviewable controls and evidence.</p><span class="step-type det">Deterministic</span></li>
+          <li><small>04</small><h3>Risk and readiness scoring</h3><p>Scoring identifies risk, missing evidence, and mandatory launch blockers.</p><span class="step-type det">Deterministic</span></li>
+          <li><small>05</small><h3>Tickets and evidence</h3><p>Templates create work hierarchy, acceptance criteria, and required evidence.</p><span class="step-type ai">Controlled generation</span></li>
+          <li><small>06</small><h3>Human review</h3><p>Accountable owners interpret risk, resolve exceptions, and approve decisions.</p><span class="step-type human">Human authority</span></li>
+          <li><small>07</small><h3>Delivery outputs</h3><p>Reviewed packages export to Jira, ADO, Rally, Asana, and evidence stores.</p><span class="step-type output">Dry run before write</span></li>
+        </ol>
+      </section>
+
+      <section class="case-section" id="walkthrough">
+        <p class="eyebrow">Product walkthrough</p>
+        <h2>Eight proof points from intake through launch readiness.</h2>
+        <p>Each placeholder identifies the exact public-safe screenshot that must replace it after capture from the synthetic demo.</p>
+        <div class="walkthrough-grid">
+          <article class="shot-slot"><div class="shot-frame"><div><span>Screenshot needed 01</span><strong>Messy intake loaded</strong><small>Capture the synthetic healthcare file-mover intake with named platforms, schedule, unresolved approvals, and missing recipient confirmation visible.</small></div></div><h3>Start with reality</h3><p>The product must interpret incomplete business language before producing reliable work.</p></article>
+          <article class="shot-slot"><div class="shot-frame"><div><span>Screenshot needed 02</span><strong>Readiness score with blockers</strong><small>Capture 82 out of 100 with three mandatory launch blockers and a visible No-Go recommendation.</small></div></div><h3>Readiness is more than a number</h3><p>Mandatory gates remain visible even when the aggregate score appears healthy.</p></article>
+          <article class="shot-slot"><div class="shot-frame"><div><span>Screenshot needed 03</span><strong>Detected platform stack</strong><small>Capture Snowflake, dbt, managed file transfer, Power BI, and REST API controls detected from the synthetic intake.</small></div></div><h3>Platforms activate controls</h3><p>The stack changes which evidence, approvals, and delivery checks are required.</p></article>
+          <article class="shot-slot"><div class="shot-frame"><div><span>Screenshot needed 04</span><strong>Launch blocker detail</strong><small>Capture the recipient allowlist, security approval, and rollback ownership blockers with severity, owner, evidence, and resolution.</small></div></div><h3>Blockers must be actionable</h3><p>Each blocker identifies why it matters and what closes it.</p></article>
+          <article class="shot-slot"><div class="shot-frame"><div><span>Screenshot needed 05</span><strong>Generated ticket hierarchy</strong><small>Capture the epic, stories, and tasks for intake remediation, data controls, UAT, readiness, and post-launch monitoring.</small></div></div><h3>Governance becomes work</h3><p>The output connects controls to delivery ownership.</p></article>
+          <article class="shot-slot"><div class="shot-frame"><div><span>Screenshot needed 06</span><strong>Jira or ADO export preview</strong><small>Capture issue type, parent, priority, acceptance criteria, evidence label, and accountable role before an external write.</small></div></div><h3>Review before writing</h3><p>Dry-run exports make mapping, permissions, and issue behavior inspectable.</p></article>
+          <article class="shot-slot"><div class="shot-frame"><div><span>Screenshot needed 07</span><strong>Evidence packet</strong><small>Capture evidence grouped by security, privacy, data validation, delivery, UAT, and approval owner.</small></div></div><h3>Evidence is a launch input</h3><p>The system identifies what must be proven, not only completed.</p></article>
+          <article class="shot-slot"><div class="shot-frame"><div><span>Screenshot needed 08</span><strong>Final readiness summary</strong><small>Capture resolved blockers, accepted residual risks, named approvers, rollback decision, and final Go or No-Go recommendation.</small></div></div><h3>End with accountability</h3><p>The output supports human judgment and records why the decision was made.</p></article>
+        </div>
+      </section>
+
+      <section class="case-section" id="architecture">
+        <p class="eyebrow">Architecture</p>
+        <h2>Rules provide the control spine. AI helps interpret and communicate around it.</h2>
+        <div class="architecture" role="img" aria-label="Architecture showing inputs, interpretation, deterministic controls, and reviewed outputs">
+          <div class="arch-flow">
+            <div class="arch-column"><h3>1. Inputs</h3><ul><li>Unstructured intake</li><li>Business context</li><li>Platform names</li><li>Dates and owners</li><li>Synthetic documents</li></ul></div>
+            <div class="arch-column"><h3>2. Interpretation</h3><ul><li>Intake normalization</li><li>Schema mapping</li><li>Missing-information detection</li><li>Controlled summaries</li><li>Contradiction candidates</li></ul></div>
+            <div class="arch-column"><h3>3. Control spine</h3><ul><li>Rule packs</li><li>Platform profiles</li><li>Risk scoring</li><li>Mandatory gates</li><li>Evidence requirements</li></ul></div>
+            <div class="arch-column"><h3>4. Reviewed outputs</h3><ul><li>Ticket hierarchy</li><li>Readiness scorecard</li><li>Risk register</li><li>Evidence packet</li><li>Dry-run exports</li></ul></div>
+          </div>
+          <p class="architecture-note">Human review surrounds the control spine. External writes, legal conclusions, high-risk exceptions, access changes, and final launch approvals remain outside autonomous execution.</p>
+        </div>
+        <div class="boundary-grid">
+          <article class="boundary-card data-boundary"><strong>Data storage boundary</strong><p>The public demonstration uses synthetic inputs only. Enterprise use would require approved hosting, retention, encryption, access controls, audit logging, vendor review, and data-processing agreements.</p></article>
+          <article class="boundary-card no-auto"><strong>Never fully automated</strong><p>Legal interpretation, compliance approval, clinical decisions, production Go or No-Go authority, exception acceptance, access provisioning, and unreviewed external writes remain with accountable people.</p></article>
+        </div>
+      </section>
+
+      <section class="case-section" id="governance">
+        <p class="eyebrow">Governance model</p>
+        <h2>Operational governance is structured as inspectable layers.</h2>
+        <table class="governance-table">
+          <thead><tr><th>Layer</th><th>Purpose</th><th>Example control</th><th>Accountable review</th></tr></thead>
+          <tbody>
+            <tr><td>Baseline delivery</td><td>Minimum requirements for any implementation.</td><td>Named owner, success criteria, rollback plan, environment path.</td><td>Implementation and product owners</td></tr>
+            <tr><td>Platform profile</td><td>Add controls based on named systems and delivery mechanisms.</td><td>MFT recipient allowlist, Snowflake roles, API authentication.</td><td>Architecture, engineering, and platform owners</td></tr>
+            <tr><td>Regulatory overlay</td><td>Route context that may require additional review.</td><td>PHI indicators trigger privacy, security, and compliance evidence.</td><td>Privacy, security, legal, and compliance owners</td></tr>
+            <tr><td>Mandatory launch gate</td><td>Prevent scoring from hiding a critical unresolved condition.</td><td>No production delivery until recipient and destination are verified.</td><td>Launch authority</td></tr>
+            <tr><td>Evidence layer</td><td>Define what proves a control is complete.</td><td>Approved mapping, UAT result, transfer receipt, rollback rehearsal.</td><td>Control owner and implementation lead</td></tr>
+            <tr><td>Exception and escalation</td><td>Document residual risk and route decisions to accountable humans.</td><td>Time-bound exception with owner, expiration, and remediation.</td><td>Named risk acceptor</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="case-section" id="decisions">
+        <p class="eyebrow">Decisions and tradeoffs</p>
+        <h2>Trust came from constraints, not from making the system appear autonomous.</h2>
+        <table class="decision-table">
+          <thead><tr><th>Decision</th><th>Why</th><th>Tradeoff accepted</th></tr></thead>
+          <tbody>
+            <tr><td>Rules before generative AI</td><td>Critical controls should be consistent, reviewable, testable, and explainable.</td><td>Rule authoring requires more upfront domain work.</td></tr>
+            <tr><td>Human review for high-risk decisions</td><td>Launch, legal, privacy, security, and exception decisions require accountable authority.</td><td>The product supports judgment instead of promising full automation.</td></tr>
+            <tr><td>Dry-run Jira payloads before issue creation</td><td>Field mapping, issue types, permissions, and failures must be validated before writes.</td><td>Users review an intermediate step.</td></tr>
+            <tr><td>Synthetic data only</td><td>Public proof must not expose employer, customer, patient, or proprietary information.</td><td>The demo cannot claim production-data certification.</td></tr>
+            <tr><td>CSV export before direct integrations</td><td>Exports validate the work model before authentication and write complexity.</td><td>CSV is less seamless than a native integration.</td></tr>
+            <tr><td>Configurable governance rule packs</td><td>Organizations, platforms, risk tolerances, and approval models differ.</td><td>Rule configuration and versioning become product responsibilities.</td></tr>
+            <tr><td>Operational governance instead of legal conclusions</td><td>The system can identify missing evidence and routing without claiming legal authority.</td><td>Final interpretation remains with qualified owners.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="case-section" id="artifacts">
+        <p class="eyebrow">Implementation artifacts</p>
+        <h2>Inspect the synthetic proof package.</h2>
+        <p>These artifacts use a fictional healthcare network and synthetic identifiers. They connect intake, risk, accountability, testing, evidence, launch decisions, and post-launch learning.</p>
+        <div class="artifact-grid">
+          <a class="artifact-card" href="../public/downloads/intelligent-services-demo/synthetic-intake.md" download><span>Discovery</span><strong>Synthetic intake</strong><p>Incomplete healthcare data-delivery request with assumptions and missing decisions.</p><b>Download .md</b></a>
+          <a class="artifact-card" href="../public/downloads/intelligent-services-demo/readiness-scorecard.md" download><span>Readiness</span><strong>Readiness scorecard</strong><p>82 out of 100 with mandatory blockers that prevent a false Go.</p><b>Download .md</b></a>
+          <a class="artifact-card" href="../public/downloads/intelligent-services-demo/risk-register.csv" download><span>Risk</span><strong>Risk register</strong><p>Prioritized risks, mitigations, evidence, ownership, and residual status.</p><b>Download .csv</b></a>
+          <a class="artifact-card" href="../public/downloads/intelligent-services-demo/raci-matrix.csv" download><span>Ownership</span><strong>RACI matrix</strong><p>Accountability across delivery, product, data, security, privacy, and customers.</p><b>Download .csv</b></a>
+          <a class="artifact-card" href="../public/downloads/intelligent-services-demo/jira-import.csv" download><span>Execution</span><strong>Jira import</strong><p>Epic, story, and task hierarchy with acceptance criteria and evidence labels.</p><b>Download .csv</b></a>
+          <a class="artifact-card" href="../public/downloads/intelligent-services-demo/evidence-checklist.md" download><span>Evidence</span><strong>Evidence checklist</strong><p>Proof requirements for data, security, privacy, UAT, delivery, and rollback.</p><b>Download .md</b></a>
+          <a class="artifact-card" href="../public/downloads/intelligent-services-demo/uat-plan.csv" download><span>Validation</span><strong>UAT plan</strong><p>Business, data-quality, delivery, access, exception, and recovery scenarios.</p><b>Download .csv</b></a>
+          <a class="artifact-card" href="../public/downloads/intelligent-services-demo/go-no-go-summary.md" download><span>Launch</span><strong>Go or No-Go summary</strong><p>Decision packet with blockers, risks, approvers, rollback, and recommendation.</p><b>Download .md</b></a>
+          <a class="artifact-card" href="../public/downloads/intelligent-services-demo/post-launch-review.md" download><span>Learning loop</span><strong>Post-launch review</strong><p>Stabilization results, friction, metrics, and permanent improvements.</p><b>Download .md</b></a>
+        </div>
+      </section>
+
+      <section class="case-section" id="validation">
+        <p class="eyebrow">Testing and validation</p>
+        <h2>The prototype is evaluated as a product system, not only as a page.</h2>
+        <div class="validation-grid">
+          <article class="card"><strong>Repository validation surface</strong><ul><li>Rule-pack parsing and expected findings</li><li>Governed package generation</li><li>Platform profile detection</li><li>Backend API behavior</li><li>Jira Forge dry-run payload preparation</li><li>Schema and export integrity</li></ul></article>
+          <article class="card"><strong>Representative test command</strong><p>The source repository documents focused pytest coverage for the rule engine, package generation, platform profiles, backend API, and Jira scaffold.</p><div class="test-command">python -m pytest tests/test_yaml_rule_packs.py tests/test_governed_delivery_package.py tests/test_platform_stack_profiles.py tests/test_backend_demo_api.py tests/test_jira_forge_scaffold.py</div></article>
+        </div>
+      </section>
+
+      <section class="case-section" id="limitations">
+        <p class="eyebrow">Known limitations</p>
+        <h2>A credible prototype names what it cannot yet prove.</h2>
+        <div class="limitations">
+          <article class="limitation"><strong>Static demo integration</strong><p>The free-trial interface still needs a productionized connection to the backend API.</p></article>
+          <article class="limitation"><strong>External write actions</strong><p>Jira creation remains limited to dry-run payloads until mapping, permissions, retries, and rollback are validated.</p></article>
+          <article class="limitation"><strong>Rule authoring format</strong><p>Executable rule packs use JSON-compatible YAML. A true YAML parser and stricter schema validation remain roadmap items.</p></article>
+          <article class="limitation"><strong>Platform coverage</strong><p>Profiles focus on selected data and delivery platforms. Broader enterprise coverage is incomplete.</p></article>
+          <article class="limitation"><strong>Enterprise controls</strong><p>Authentication, tenant isolation, retention, observability, and audit-control mapping are not complete.</p></article>
+          <article class="limitation"><strong>No legal or compliance certification</strong><p>The framework supports review and escalation. It does not provide legal advice or certify compliance.</p></article>
+        </div>
+      </section>
+
+      <section class="case-section" id="roadmap">
+        <p class="eyebrow">Enterprise roadmap</p>
+        <h2>Move from credible proof to controlled enterprise adoption.</h2>
+        <div class="roadmap-grid">
+          <article class="roadmap-card"><span>Stage 01</span><h3>Close the demo loop</h3><p>Connect the interface to the backend, replace placeholders, strengthen schemas, and add contradiction detection.</p></article>
+          <article class="roadmap-card"><span>Stage 02</span><h3>Controlled integrations</h3><p>Add authenticated Jira and ADO pilots with approvals, idempotency, retries, dry runs, and audit logs.</p></article>
+          <article class="roadmap-card"><span>Stage 03</span><h3>Enterprise governance</h3><p>Add tenant configuration, role-based access, rule versioning, policy approvals, observability, and retention.</p></article>
+          <article class="roadmap-card"><span>Stage 04</span><h3>Measured adoption</h3><p>Measure intake completeness, blocker discovery, cycle time, rework, audit readiness, and launch quality.</p></article>
+        </div>
+      </section>
+
+      <section class="case-section" id="contribution">
+        <p class="eyebrow">My role and contribution</p>
+        <h2>The value is the product judgment and operating architecture, not a claim of hand-coding every line.</h2>
+        <div class="contribution">
+          <div class="contribution-callout"><strong>Honest contribution statement</strong><p>Josiah identified the problem, designed the operating model, defined product requirements, structured the governance framework, designed the implementation lifecycle, built the prototype through AI-assisted engineering, validated outputs, and documented the roadmap.</p></div>
+          <ul class="contribution-list"><li>Translated recurring delivery failures into a product problem</li><li>Defined users, value, constraints, and maturity</li><li>Structured rules, evidence, readiness, and escalation</li><li>Designed the lifecycle and output package</li><li>Directed AI-assisted development and reviewed logic</li><li>Created synthetic scenarios and evaluated outputs</li><li>Documented privacy and human-review boundaries</li><li>Sequenced the path to enterprise controls</li></ul>
+        </div>
+      </section>
+
+      <section class="case-section" id="demo">
+        <div class="cta-panel">
+          <p class="eyebrow">Live demo and GitHub</p>
+          <h2>Explore the working source, run the demo locally, or discuss the product decisions.</h2>
+          <p>The source repository contains the generator, rules, schemas, tests, backend API, free-trial interface, and Jira Forge scaffold.</p>
+          <div class="hero-actions"><a class="button button-primary" href="https://github.com/Rando2020/Intelligent_Services">Explore the repository</a><a class="button button-secondary" href="https://github.com/Rando2020/Intelligent_Services#free-trial-demo-app">Run the demo locally</a><a class="button button-secondary" href="mailto:JosiahParve@gmail.com?subject=Governed%20Delivery%20portfolio%20conversation">Discuss the project</a></div>
+          <p class="cta-notice"><strong>Deployment status:</strong> A public hosted demo is not yet claimed. The current proof is available through the source repository and documented local run instructions.</p>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="related-title">
+        <p class="eyebrow">Related case studies</p>
+        <h2 id="related-title">See the experience behind the product.</h2>
+        <div class="related-grid">
+          <a class="related-card" href="healthcare-implementation.html"><span>Case study 02</span><strong>Healthcare Implementation Operating Model</strong><p>How onboarding, release operations, cost governance, QA automation, and reusable guidance were scaled.</p></a>
+          <a class="related-card" href="digital-governance.html"><span>Case study 03</span><strong>Enterprise Analytics Governance</strong><p>How automated validation and privacy governance supported more than 20 digital properties.</p></a>
+        </div>
+      </section>
     </div>
   </main>
-  <footer class="site-footer"><div class="container footer-wrap"><p>© 2026 Josiah Parve</p><p>Public case study using synthetic examples and generalized operating patterns.</p></div></footer>
+
+  <footer class="site-footer"><div class="container footer-wrap"><div><p>© 2026 Josiah Parve</p><p>Public case study using synthetic examples and generalized operating patterns.</p></div><nav class="case-footer-nav" aria-label="Footer navigation"><a href="../index.html">Portfolio</a><a href="../index.html#work">All work</a><a href="#artifacts">Proof package</a><a href="healthcare-implementation.html">Healthcare implementation</a><a href="digital-governance.html">Analytics governance</a></nav></div></footer>
 </body>
 </html>
