@@ -1,0 +1,9 @@
+Risk ID,Category,Risk Statement,Likelihood,Impact,Initial Rating,Mitigation,Required Evidence,Accountable Owner,Target Date,Residual Rating,Status
+R-001,Delivery,File may be sent to an unapproved recipient or destination because the production allowlist is not confirmed,Medium,Critical,Critical,Approve exact recipients and destination before production,Approved recipient list and allowlist screenshot,Customer Owner,2026-08-07,Low,Open
+R-002,Security,API authentication and authorization pattern is not selected,Medium,High,High,Select approved pattern and complete security review,Security architecture approval,Security Reviewer,2026-08-07,Low,Open
+R-003,Recovery,Rollback authority is not assigned,Medium,High,High,Assign rollback owner and rehearse recovery,Approved runbook and rehearsal evidence,Launch Authority,2026-08-14,Low,Open
+R-004,Data Quality,Dashboard and file totals may diverge due to rounding or model-version differences,Medium,Medium,Medium,Define reconciliation tolerance and compare transformation versions,UAT reconciliation report,Data Owner,2026-08-14,Low,In Progress
+R-005,Privacy,Data-retention period and privacy disposition are not documented,Low,High,Medium,Complete privacy review and retention decision,Privacy review disposition,Privacy Reviewer,2026-08-07,Low,Open
+R-006,Operations,Failed transfer may not create a timely incident or customer notification,Medium,Medium,Medium,Define receipt SLA and incident thresholds,Incident workflow test,Implementation Lead,2026-08-14,Low,In Progress
+R-007,Schedule,Customer approval delay could compress final UAT and launch review,Medium,Medium,Medium,Set approval due dates and escalation cadence,Decision log and status report,Implementation Lead,2026-08-07,Medium,Monitoring
+R-008,Access,Service-account ownership may be unclear after launch,Low,High,Medium,Assign owner and quarterly access review,Approved access record and review schedule,Engineering Owner,2026-08-14,Low,Open
